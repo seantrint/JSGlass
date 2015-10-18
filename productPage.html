@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>J & S Glasses </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- 1140px Grid styles for IE -->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<!-- The 1140px Grid - http://cssgrid.net/ -->
+	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+	
+	<!-- Your styles -->
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/home-css.css" type="text/css" media="screen" />
+	
+	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	
+	<!--Delete embedded styles, just for example.-->
+	<style type="text/css">
+	body
+	{
+		background-image:url("NewBlueBackground.jpg");
+		font-family: Gotham, Optima, "Segoe UI", Helvetica, Arial, sans-serif;
+		
+	}
+
+
+	
+	.container p {
+	color:black;
+	line-height: 10px;
+	text-align: center;
+	margin: 20px 0 0 0;
+	border:px solid;
+	
+	}
+	
+	</style>
+	
+	<link href="http://vjs.zencdn.net/4.5/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/4.5/video.js"></script>
+<style type="text/css">
+  .vjs-default-skin { color: #8f1616; }
+  .vjs-default-skin .vjs-play-progress,
+  .vjs-default-skin .vjs-volume-level { background-color: #348bbb }
+  .vjs-default-skin .vjs-control-bar { font-size: 70% }
+</style>
+
+<script type="text/javascript">
+
+function TDView()
+{
+var img = document.getElementById("1");
+img.src="glasses.blend.png";
+return false;
+}	   
+
+function FrontView()
+{
+var img = document.getElementById("1");
+img.src="FrontView.blend.png";
+return false;
+}	
+
+function SideView()
+{
+var img = document.getElementById("1");
+img.src="SideView.blend.png";
+return false;
+}	    
+  
+function TopView()
+{
+var img = document.getElementById("1");
+img.src="TopView.blend.png";
+return false;
+}	
+
+function RearView()
+{
+var img = document.getElementById("1");
+img.src="RearView.blend.png";
+return false;
+}	            
+</script>
+
+</head>
+
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="twocol">
+			<p><img src = "Newglasses2.png"/></p>
+		</div>
+		
+		<div class="tencol last">
+			<p><embed src="banner.swf" width="100%" height="150px" border= "5px solid"/></p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="twocol">
+			<ul>
+	<p><a href="index.html"><li class="tabs">Home </li></a> </p>
+	<br/>
+	<br/>
+	<p><a href="productPage.html"><li class="tabs">Product </li></a></p>
+	<br/>
+	<br/>
+	<p><a href="form.html"><li class="tabs">Register </li></a></p>
+	<br/>
+	<br/>
+	<p><a href="AboutUs.html"><li class="tabs">About us </li></a></p>
+</ul> 
+		</div>
+		
+		
+		<div class="tencol last">
+
+		<div class="txtDesc"><h1 align="center"><u> The Product </u></h1></div>
+			<div class="imeges" align="center" >
+			<p><img id="1" src="glasses.blend.png" align="center" border="0">
+			</div>
+			<div class="txtDesc" align="center"> Click a button to change image </div>
+	
+			
+
+
+			
+			</p>
+		</div>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="twocol " >
+			<p><a href="http://www.facebook.ie"><img src="facebooklbl.jpg"/></a></canvas><br></br><img src="facebookhome.jpg"/></p>
+		</div>
+		
+		<div class="tencol last" >
+			<p>
+			<input onclick="TDView();" class="batan" type="submit" value="3D-View" />
+			<input onclick="SideView();" class="batan" type="submit" value="Side View" />
+			<input onclick="FrontView();" class="batan" type="submit" value="Front View" />
+			<input onclick="TopView();" class="batan" type="submit" value="Top View" />
+			<input onclick="RearView();" class="batan" type="submit" value="Rear View" />
+			
+			
+			</p>
+		</div>
+		
+	</div>
+</div>
+
+
+</body>
+
+</html>

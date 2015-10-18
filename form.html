@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>J & S Glasses </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- 1140px Grid styles for IE -->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<!-- The 1140px Grid - http://cssgrid.net/ -->
+	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+	
+	<!-- Your styles -->
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/home-css.css" type="text/css" media="screen" />
+	
+	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	
+	<!--Delete embedded styles, just for example.-->
+	<style type="text/css">
+	body
+	{
+		background-image:url("NewBlueBackground.jpg");
+		font-family: Gotham, Optima, "Segoe UI", Helvetica, Arial, sans-serif;
+		
+	}
+
+
+	
+	.container p {
+	color:white;
+	line-height: 15px;
+	text-align: center;
+	margin: 20px 0 0 0;
+	
+	
+	}
+	
+	</style>
+   <script type="text/javascript">
+   
+    window.onload = initAll;
+    function initAll() {
+    document.getElementById('submit').onclick = validate
+    }
+    
+    function validate()
+    {
+      var agevalue=document.forms["form1"]["age"].value;
+      var namevalue=document.forms["form1"]["name"].value;
+	  var passwordval=document.forms["form1"]["password"].value;
+	  var usernameval=document.forms["form1"]["username"].value;
+	  var emailval=document.forms["form1"]["email"].value;
+	  var atpos=emailval.indexOf("@");
+	  var dotpos=emailval.lastIndexOf(".");
+	 
+	
+
+	if (isNaN(agevalue))
+		{
+			alert('"' + agevalue + '" is not a number. Please enter a number.');
+			return false;
+		}
+		
+	else if (namevalue== null || namevalue == "")
+		{
+			alert("You must enter a name");
+			return false
+		}
+		
+	else if (namevalue.length < 3)
+		{
+			alert("Name entered is too small, must be greater than 3 letters");
+			return false
+		}
+		
+	else if (agevalue < 18)
+        {
+        		alert(agevalue + " is too Young");
+        		return false;
+        }
+		
+	else if(passwordval==null || passwordval=="" )
+		{
+			alert("Invalid/No password entered")
+			return false;
+		}
+		
+	else if(usernameval==null || usernameval=="" )
+		{
+			alert("Invalid/No username entered")
+			return false;
+		}
+	else if(atpos<1 || dotpos<atpos+2 || dotpos+2>=emailval.length)
+		{
+			alert("Not a valid e-mail address");
+			document.getElementById("email").focus();
+			return false;
+		}
+		
+        else
+        {
+        	alert("You have been successfully registered");
+        	return true;
+        }
+			
+			
+   
+	}
+	  
+	  function nonumber(e) {
+		var k;
+		document.all ? k = e.keyCode : k = e.which;
+		return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8);
+		}
+		
+	  function isNumberKey(evt){
+         var charCode = (evt.which) ? evt.which : event.keyCode
+          if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+             return true;
+          }
+	  </script>
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="twocol">
+			<p><img src = "Newglasses2.png"/></p>
+		</div>
+		
+		<div class="tencol last">
+			<p><embed src="banner.swf" width="100%" height="150px" border= "5px solid"/></p>
+		</div>
+	</div>
+</div>
+		     
+<div class="container">
+	<div class="row">
+		<div class="twocol">
+			<ul>
+	<p><a href="index.html"><li class="tabs">Home </li></a> </p>
+	<br/>
+	<br/>
+	<p><a href="productPage.html"><li class="tabs">Product </li></a></p>
+	<br/>
+	<br/>
+	<p><a href="form.html"><li class="tabs">Register </li></a></p>
+	<br/>
+	<br/>
+	<p><a href="AboutUs.html"><li class="tabs">About us </li></a></p>
+</ul> 
+	</div>
+<div class="tencol last" align="center">
+<div id="register">
+<form name="form1" onsubmit="return validate()" method="post" action="mailto:forms@hahaha.com" >
+<h1> Register for a free account </h1> <br/>
+<fieldset>
+<legend>Please fill out the following fields</legend>
+	<p><label for="name"> Name: </label> <input type="text" name="name" onkeypress="return nonumber(event)" /></p>
+	<p><label for="age">Age: </label> <input type="text"  name="age" onkeypress="return isNumberKey(event)"/></p>
+	<p><label for="e-mail"> E-mail: </label> <input type="text" name="e-mail" id="email" /></p>
+	<p><label for="username"> Username: </label> <input type="text" name="username"/></p>
+	<p><label for="password"> Password: </label> <input type="password" name="password"/></p>
+
+
+
+
+
+<p class="submit"><input class="formb" type="submit" id="submit" value="Submit" /><input class="formb" type="reset" value="Reset fields"/></p>
+
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="twocol " >
+			<p><a href="http://www.facebook.ie"><img src="facebooklbl.jpg"/></a></canvas><br></br><img src="facebookhome.jpg"/></p>
+		</div>
+		</div>
+		</div>
+
+</body>
+</html>
